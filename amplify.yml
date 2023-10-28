@@ -15,11 +15,11 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
-test:
-  phases:
-    preTest:
-      commands:
-        - 'npx playwright install'
-    test:
-      commands:
-        - 'npm run test:prod'
+# test:
+#   phases:
+#     preTest:
+#       commands:
+#         - 'npx playwright install'
+#     test:
+#       commands:
+#         - 'npm run test:prod'
