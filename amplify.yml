@@ -7,10 +7,6 @@ frontend:
     build:
       commands:
         - 'npm run docs:build'
-    test:
-      commands:
-        - 'npx playwright install'
-        - 'npm run test:prod'  
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /
@@ -19,3 +15,11 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+test:
+  phases:
+    preTest:
+      commands:
+        - 'npx playwright install'
+    test:
+      commands:
+        - 'npm run test:prod'
